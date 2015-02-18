@@ -154,7 +154,7 @@ func (srv *SocketIOServer) handShake(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	// w.Header().Set("Access-Control-Allow-Origin", r.Header.Get("origin"))
+	w.Header().Set("Access-Control-Allow-Origin", r.Header.Get("origin"))
 	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	w.Header().Set("Access-Control-Allow-Credentials", "true")
 
